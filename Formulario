@@ -1,0 +1,155 @@
+//app.js
+
+const express = require('express');
+const app = express();
+
+app.set('view engine','ejs')
+
+app.get('/',(req, res)=>{
+    //res.send('hola mundo')
+    res.render('index')
+    })
+
+app.get('/form',(req,res)=>{
+    res.render('formulario')
+})    
+
+app.listen(3000, ()=>{
+    console.log('Escuchando desde el puerto 3000')
+})
+
+
+//index.ejs
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title>
+  <link rel="stylesheet" href="cool.css">
+</head>
+<body>
+   
+
+    <div class="principal"> 
+        <h1>Curriculum Vitae</h1>
+        <br><br><br>
+        <h2>Sergio Antonio Hurtado Realza</h2>
+        <br><br>
+
+        <fieldset>
+            <legend>DATOS PERSONALES</legend>
+            <ul>
+                <li>Cedula: 29.657.727</li>
+                <li>Edad: 18 años</li>
+                <li>Estado Civil: Soltero</li>
+                <li>Correo: serujiourutado@gmail.com</li>
+                <li>Fecha de nacimiento: 19/12/2002</li>
+                <li>Genero: Masculino</li>
+                <li>Telefono: 0424-3577463</li>
+                <li>Lugar de nacimiento: Calabozo, Estado Guarico</li>
+                <li>Direccion: Urbanizacion el Saman</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>FORMACION ACADEMICA</legend>
+            <ul>
+                <li>Desde Preescolar hasta Bachillerato: Colegio Casa Hogar Mons. Arturo Celestino Alvarez. Graduado en Bachiller en Ciencias. Calabozo Estado Guarico</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>EXPERIENCIA LABORAL</legend>
+            <ul>
+                <li>Operador de Audio. Radio 94.5 FM, duracion 6 meses</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>REDES SOCIALES</legend>
+            <ul>
+                <li><a href="https://www.instagram.com/xkanji_19?r=nametag">Instagram</a></li>
+                <li><a href="https://www.facebook.com/sergio.hurtado.585559">Facebook</a></li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>HABILIDADES Y DESTREZAS</legend>
+            <ul>
+                <li>Responsable</li>
+                <li>Puntual</li>
+                <li>Creativo</li>
+                <li>Paciente</li>
+                <li>Perfeccionista</li>
+                <li>Organizado</li>
+                <li>Trabajo en equipo</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>REFERENCIAS PERSONALES</legend>
+            <ul>
+                <li>Dayrelis Romano, Segundo Año de Derecho. Telefono: 0414-4870623</li>
+                <li>Elena Marcano, Lic. Contadoria Publica. Telefono: 0424-3531039</li>
+                <li>Pedro Hurtado, Ing. Telecomunicaciones. Telefono: 0424-4243755</li>
+            </ul>
+        </fieldset>
+    </div>
+
+    <style>
+
+h1{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+ 
+}
+
+.principal{
+    border: solid 5px whitesmoke;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+legend{
+    border: solid 5px rgb(0, 83, 75);
+    font-weight: bold;
+    background: rgb(190, 187, 187);
+    text-align: center;
+}
+
+fieldset{
+    background: rgb(156, 177, 245);
+    border-color: darkslategrey;
+    border-radius: 10px;
+}
+
+ul{
+    font-weight: bold;
+}
+
+h2{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    border: solid green;
+}
+
+body{
+    background: gray;
+}
+
+div{
+    background: floralwhite;
+}
+      </style>
+
+</body>
+</html>
+
